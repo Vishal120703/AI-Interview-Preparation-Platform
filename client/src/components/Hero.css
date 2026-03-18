@@ -1,0 +1,116 @@
+/* HERO SECTION */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  gap: 40px;
+  flex-wrap: wrap; /* helps prevent overflow */
+}
+
+/* LEFT */
+.hero-left {
+  flex: 1;
+  max-width: 50%;
+}
+
+.hero-left h1 {
+  font-size: clamp(28px, 5vw, 42px); /* responsive font */
+  font-weight: 700;
+}
+
+.hero-left span {
+  color: #2e8b57;
+}
+
+.hero-left p {
+  margin-top: 15px;
+  color: #666;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* BUTTONS */
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap; /* prevent overflow */
+}
+
+.primary-btn {
+  background: black;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.primary-btn:hover {
+  opacity: 0.8;
+}
+
+.secondary-btn {
+  background: #eee;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.secondary-btn:hover {
+  background: #ddd;
+}
+
+/* RIGHT */
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-right img {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+}
+
+/* 🔥 RESPONSIVE */
+@media (max-width: 1142px) {
+  .hero {
+    flex-direction: column;
+    align-items: flex-start; /* keep left alignment */
+  }
+
+  .hero-left {
+    max-width: 100%;
+  }
+
+  .hero-right {
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
+/* 📱 MOBILE */
+@media (max-width: 600px) {
+  .hero {
+    padding: 20px;
+  }
+
+  .hero-left h1 {
+    font-size: 26px;
+  }
+
+  .hero-left p {
+    font-size: 14px;
+  }
+
+  .buttons {
+    gap: 10px;
+  }
+}

@@ -1,8 +1,11 @@
 import React from 'react'
+import MainLayout from './layouts/MainLayout'
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <MainLayout/>
+    </div> 
   )
 }
 
