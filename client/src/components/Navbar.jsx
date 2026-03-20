@@ -7,7 +7,7 @@ const Navbar = () => {
     <nav className="navbar">
       {/* Left Section */}
       <div className="navbar-left">
-        <div className="logo">
+        <div className="nav-logo">
           <img src={logo} alt="logo" />
         </div>
         <h2 className="brand">InterviewIQ.AI</h2>

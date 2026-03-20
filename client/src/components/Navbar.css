@@ -14,12 +14,16 @@
   align-items: center;
   gap: 10px;
 }
-
-.logo {
-  font-size: 24px;
+.navbar-left h2 {
+  color:#2e8b57;
 }
-.logo img{
-  padding-top: 5px;
+
+.nav-logo {
+  /* font-size: 24px; */
+  margin: 0px;
+}
+
+.nav-logo img{
   height: 40px;
   /* size: 12px; */
 }

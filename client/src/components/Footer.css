@@ -1,0 +1,105 @@
+.footer {
+  padding: 60px 20px;
+}
+
+/* Card Container */
+.footer-box {
+  background: #c6e9d2;
+  border-radius: 20px;
+  padding: 40px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* Columns */
+.footer-col h4 {
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.footer-col p {
+  color: #777;
+  margin: 6px 0;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.footer-col p:hover {
+  color: #2e8b57;
+}
+
+/* Logo */
+.logo {
+  margin-bottom: 10px;
+  color: #2e8b57;
+}
+.logo img{
+    height: 40px;
+}
+
+/* Social */
+.socials {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.socials span {
+  background: #e8f5ec;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Bottom */
+.footer-bottom {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* IMPORTANT */
+  gap: 10px;
+
+  border-top: 1px solid #e5e5e5;
+  padding-top: 15px;
+
+  color: #888;
+  font-size: 14px;
+}
+
+.footer-links-bottom {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* 🔥 RESPONSIVE BREAKPOINTS */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .footer-box {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .footer-box {
+    grid-template-columns: 1fr;
+    padding: 25px;
+  }
+
+  .footer {
+    padding: 40px 15px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
