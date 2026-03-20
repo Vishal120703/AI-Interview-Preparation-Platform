@@ -13,7 +13,7 @@ app.use(express.json());
 
 // Connect services
 connectDB();
-// await connectRedis();
+await connectRedis();
 
 
 // Routes
