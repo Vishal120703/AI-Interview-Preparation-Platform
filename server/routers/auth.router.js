@@ -1,7 +1,9 @@
 import express from 'express'
-import {register} from '../controllers/auth.controller.js'
-const router = express.Router()
+import {register,verifyOtp} from '../controllers/auth.controller.js'
+const router = express.Router();
 
-router.get("/",register);
+// router.get("/",register);
+router.post("/register",register)
+router.post("/verify-otp",verifyOtp);
 
 export default router;
