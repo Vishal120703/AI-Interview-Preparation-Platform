@@ -1,7 +1,7 @@
-import User from "../models/user.model.js"
+import User from "../models/user.model.js";
 import otpgeneration from "otp-generator";
 import bcrypt from "bcrypt";
-import redisClient from "../config/redis.js"
+import redisClient from "../config/redis.js";
 import sendOtpEmail from "../utils/sendOtp.js";
 export const register = async(req,res) =>{
     try{
@@ -21,7 +21,7 @@ export const register = async(req,res) =>{
             { EX: 300 }
         );
         await redisClient.set(`otp:${email}`, otp, { EX: 300 });
-        
+
         await sendOtpEmail(email, otp);
         return res.status(200).json({ msg: "OTP sent successfully" });
     }
@@ -38,7 +38,7 @@ export const verifyOtp = async(req,res)=>{
         if (!storedOTP) {
             return res.status(400).json({ msg: "OTP expired" });
         }
-        if (storedOTP !== otp) {
+        if (storedOTP != otp) {
             return res.status(400).json({ msg: "Invalid OTP" });
         }
         const userData = await redisClient.get(`register:${email}`);
