@@ -33,7 +33,7 @@ const Signup = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "http://localhost:3000/api/auth/register",
         formData
       );
 
@@ -56,7 +56,7 @@ const Signup = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/verify-otp",
+        "http://localhost:3000/api/auth/verify-otp",
         {
           email,
           otp,
@@ -68,7 +68,7 @@ const Signup = () => {
       // remove temp email
       sessionStorage.removeItem("otpEmail");
 
-      alert("Signup Successful 🎉");
+      alert("Signup Successful");
 
       // redirect to login/dashboard
       navigate("/login");

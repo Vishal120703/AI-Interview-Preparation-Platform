@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import Signup from './components/Signup'
+import Login from './components/Login'
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Routes>
         <Route path="/" element = {<MainLayout/>}/>
         <Route path="/signup" element= {<Signup/>} />
+        <Route path="/login" element={<Login/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>
