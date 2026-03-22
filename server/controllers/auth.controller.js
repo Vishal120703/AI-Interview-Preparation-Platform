@@ -3,6 +3,7 @@ import otpgeneration from "otp-generator";
 import bcrypt from "bcrypt";
 import redisClient from "../config/redis.js";
 import sendOtpEmail from "../utils/sendOtp.js";
+import generateToken from "../utils/generateToken.js"
 export const register = async(req,res) =>{
     try{
         const { name, email, password } = req.body;
@@ -60,4 +61,35 @@ export const verifyOtp = async(req,res)=>{
         res.status(500).json({ msg: "Server error" });
     }
 
+}
+
+export const login = async(req,res)=>{
+    try{
+
+        const{email,password} = req.body;
+        if(!email|| !password){
+            return res.status(400).json({msg:"Fill All the required Fields."})
+        }
+
+        const user = await User.findOne({email});
+        if(!user){
+            return res.status(401).json({msg:"user not Exist"});
+        }
+        
+        const isMatch = await bcrypt.compare(password,user.password);
+        if(!isMatch){
+            return res.status(401).json({msg:"Password is Wrong"})
+        }
+        const token = generateToken(user._id);
+        return res.status(200).json({sucess:true,token,user:{
+            id:user._id,
+            email:user.email,
+            name:user.name}
+        });
+
+    }
+
+    catch(err){
+        return res.status(500).json({msg:err});
+    }
 }
