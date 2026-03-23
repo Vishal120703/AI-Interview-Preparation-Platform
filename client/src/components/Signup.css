@@ -1,14 +1,14 @@
 .signup-container {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  padding: 20px;
+  /* background: linear-gradient(135deg, #667eea, #764ba2); */
+  /* padding: 20px; */
 }
 
 .signup-box {
-  background: #fff;
+  background: #c6e9d2;
   padding: 30px 25px;
   border-radius: 15px;
   width: 100%;
@@ -25,7 +25,7 @@
 
 /* Inputs */
 .signup-box input {
-  width: 100%;
+  width: 95%;
   padding: 12px;
   margin-bottom: 15px;
   border: 1px solid #ddd;
@@ -44,7 +44,7 @@
 .signup-box button {
   width: 100%;
   padding: 12px;
-  background: #667eea;
+  background: #2e8b57;
   border: none;
   color: #fff;
   font-weight: bold;
@@ -54,7 +54,7 @@
 }
 
 .signup-box button:hover {
-  background: #5a67d8;
+  background: #237423;
 }
 
 /* OTP Box */
