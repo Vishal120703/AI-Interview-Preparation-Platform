@@ -1,70 +1,23 @@
-import React from "react";
-import "./footer.css";
-import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
-import logo from "../assets/logo.png"
+import React from 'react'
+import { BsRobot } from 'react-icons/bs'
 
-const Footer = () => {
+function Footer() {
   return (
-    <footer className="footer">
-
-      <div className="footer-box">
-
-        {/* Column 1 */}
-        <div className="footer-col">
-          <h3 className="logo"><img src={logo} alt="logo" />InterviewIQ.AI</h3>
-          <p>
-            Practice smarter with AI-powered mock interviews and real-time feedback.
-          </p>
-
-          <div className="socials">
-            <span>🌐</span>
-            <span>🐦</span>
-            <span>💼</span>
-            <span>📷</span>
-          </div>
+    <div className='bg-transparent flex justify-center px-4 pb-10 py-4 pt-10'>
+      <div className='w-full max-w-6xl bg-white/95 backdrop-blur-sm rounded-[24px] shadow-lg border border-indigo-100 py-8 px-4 text-center'>
+        <div className='flex justify-center items-center gap-3 mb-3'>
+            <div className='bg-gradient-to-br from-indigo-500 via-violet-500 to-sky-500 text-white p-2 rounded-xl shadow-md'><BsRobot size={16}/></div>
+            <h2 className='font-semibold bg-gradient-to-r from-indigo-700 via-violet-600 to-sky-600 bg-clip-text text-transparent'>InterviewIQ.AI</h2>
         </div>
+        <p className='text-gray-500 text-sm max-w-xl mx-auto'>
+  AI-powered interview preparation platform designed to improve
+          communication skills, technical depth and professional confidence.
+        </p>
 
-        {/* Column 2 */}
-        <div className="footer-col">
-          <h4>Quick Links</h4>
-          <p>About Us</p>
-          <p>Features</p>
-          <p>How It Works</p>
-          <p>Careers</p>
-        </div>
-
-        {/* Column 3 */}
-        <div className="footer-col">
-          <h4>Our Services</h4>
-          <p>AI Mock Interviews</p>
-          <p>Resume Analysis</p>
-          <p>Voice Interview</p>
-          <p>Performance Tracking</p>
-        </div>
-
-        {/* Column 4 */}
-        <div className="footer-col">
-          <h4>Contact</h4>
-          <p>📍 Pune, India</p>
-          <p>📧 support@interviewiq.ai</p>
-          <p>📞 +91 9876543210</p>
-        </div>
 
       </div>
+    </div>
+  )
+}
 
-      {/* Bottom */}
-      <div className="footer-bottom">
-        <p>© 2026 InterviewIQ.AI. All rights reserved.</p>
-
-        <div className="footer-links-bottom">
-          <span>Terms</span>
-          <span>Privacy</span>
-          <span>Cookies</span>
-        </div>
-      </div>
-
-    </footer>
-  );
-};
-
-export default Footer;
+export default Footer
